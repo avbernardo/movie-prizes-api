@@ -41,7 +41,6 @@ export class MoviesInitService implements OnApplicationBootstrap {
       })
       .on('end', async () => {
         for (const movie of movies) {
-          console.log(movie);
           await this.movieRepository.save(movie);
         }
       });
