@@ -24,24 +24,24 @@ pnpm install
 
 ## Running the Project
 
-# Development mode
+### Development mode
 
 pnpm start:dev
 
-# Build
+### Build
 
 pnpm build
 
-# Production mode
+### Production mode
 
 pnpm start:prod
 
 ## Running Tests
 
-# Integration tests
+### Integration tests
 
 pnpm test:e2e
 
-# With coverage
+### With coverage
 
 pnpm test:e2e --coverage
