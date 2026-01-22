@@ -88,6 +88,19 @@ describe('Movie API (e2e)', () => {
     });
   });
 
+  describe('GET /movie/prize-intervals', () => {
+    it('should return status code 200 with min and max intervals', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/movie/prize-intervals')
+        .expect(200);
+
+      expect(response.body).toHaveProperty('min');
+      expect(response.body).toHaveProperty('max');
+      expect(Array.isArray(response.body.min)).toBe(true);
+      expect(Array.isArray(response.body.max)).toBe(true);
+    });
+  });
+
   /**
    * @description Reads movies from the CSV file.
    * @returns {Promise<Movie[]>} - A promise that resolves to an array of Movie objects.
